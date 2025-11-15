@@ -166,9 +166,9 @@ export default function Portfolio() {
           {projects.map((project, idx) => (
             <div key={project.id} 
                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-200">
-              <div className="grid md:grid-cols-5 gap-0">
+              <div className="flex flex-col gap-0">
                 {/* Visual/Image Column */}
-                <div className={`md:col-span-2 ${
+                <div className={`${
                   project.image === 'gradient-blue' ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
                   project.image === 'gradient-purple' ? 'bg-gradient-to-br from-purple-500 to-pink-600' :
                   'bg-gradient-to-br from-green-500 to-teal-600'
@@ -212,7 +212,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Content Column */}
-                <div className="md:col-span-3 p-8">
+                <div className="p-8">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <div className="text-sm text-blue-600 font-medium mb-1">{project.type}</div>
