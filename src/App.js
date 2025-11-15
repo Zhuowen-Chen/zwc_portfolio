@@ -197,16 +197,26 @@ export default function Portfolio() {
                       </div>
                     </div>
                   ) : project.id === 'waterford' ? (
-                    <div className="text-center text-white">
-                      <Database className="w-16 h-16 mb-4 mx-auto opacity-90" />
-                      <div className="text-lg font-bold mb-2">Live System</div>
-                      <div className="text-sm opacity-90">Currently in production use</div>
+                    <div className="w-full h-full flex flex-col items-center justify-center">
+                      <img 
+                        src="https://i.imgur.com/dAcq1l6.jpeg"
+                        alt="Waterford Crystal Inventory System Screenshot"
+                        className="w-full h-auto rounded-lg shadow-2xl object-cover"
+                      />
+                      <div className="text-center mt-4 text-white text-sm opacity-90">
+                        Live Production System — Waterford Crystal
+                      </div>
                     </div>
                   ) : (
-                    <div className="text-center text-white">
-                      <Layout className="w-16 h-16 mb-4 mx-auto opacity-90" />
-                      <div className="text-lg font-bold mb-2">UI/UX Design</div>
-                      <div className="text-sm opacity-90">Figma to React</div>
+                    <div className="w-full h-full flex flex-col items-center justify-center">
+                      <img 
+                        src="https://i.imgur.com/pjMqAi4.png"
+                        alt="BrickWyze UI/UX Design"
+                        className="w-full h-auto rounded-lg shadow-2xl object-cover"
+                      />
+                      <div className="text-center mt-4 text-white text-sm opacity-90">
+                        UI/UX Design — BrickWyze
+                      </div>
                     </div>
                   )}
                 </div>
