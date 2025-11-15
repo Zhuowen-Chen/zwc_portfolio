@@ -1,70 +1,153 @@
-# Getting Started with Create React App
+# 🧭 Zhuowen (Joy) Chen — Personal Portfolio (React + Tailwind CSS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio showcasing my featured projects, technical skills, and professional background.
+Built with **React**, **Tailwind CSS**, and deployed on **Vercel**.
 
-## Available Scripts
+🔗 **Live Site:** [https://zwc-portfolio.vercel.app/](https://zwc-portfolio.vercel.app/)
+🔗 **LinkedIn:** [https://linkedin.com/in/chen-zhuowen](https://linkedin.com/in/chen-zhuowen)
+🔗 **GitHub:** [https://github.com/Zhuowen-Chen](https://github.com/Zhuowen-Chen)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🎨 Modern UI & Responsive Layout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Clean and professional design using Tailwind CSS
+* Fully responsive for desktop, tablet, and mobile
+* Sticky header with quick-access social links
 
-### `npm test`
+### 🧑‍💻 Featured Project Cards
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Gradient visual header for each project
+* Key features, tech stack, and business impact
+* Live demo / GitHub / Figma links
+* Image slider for multi-image projects
+* Consistent vertical layout across all screen sizes
 
-### `npm run build`
+### 💼 Professional Hero Section
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Name, role, and personal introduction
+* Contact details: location, email, phone
+* Layout aligned with the Featured Projects section for consistency
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📊 Skills Section
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Technical skills
+* Business & sales skills
+* Tailwind-based responsive two-column layout
 
-### `npm run eject`
+### 🎓 Education Section
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* UCD MSc in Computer Science (current)
+* Thunderbird School of Global Management
+* ASU BS in Technological Entrepreneurship
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📬 Footer
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Contact call-to-action
+* Email + LinkedIn button links
+* Copyright section
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠 Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Frontend**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* React.js
+* Tailwind CSS
+* Lucide React Icons
 
-### Code Splitting
+### **Hosting**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Vercel
 
-### Analyzing the Bundle Size
+### **Tools**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* Figma (UI/UX design)
+* GitHub (version control)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📁 Project Structure
 
-### Advanced Configuration
+```
+src/
+├── App.js
+├── index.js
+├── index.css
+├── assets/
+│   └── dublinbike images
+public/
+├── index.html
+tailwind.config.js
+postcss.config.js
+package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 1. Install dependencies
 
-### `npm run build` fails to minify
+```sh
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 2. Run development server
+
+```sh
+npm start
+```
+
+### 3. Build for production
+
+```sh
+npm run build
+```
+
+### 4. Deploy to Vercel
+
+```sh
+vercel
+```
+
+---
+
+## ⭐ Featured Projects
+
+### **1. Waterford Crystal Inventory System (Production Use)**
+
+* Real-time stock and sales tracking
+* Built with React + Firebase
+* Automated reporting and alerts
+
+### **2. BrickWyze Location Intelligence Platform**
+
+* UI/UX design in Figma
+* React frontend implementation
+* Business intelligence dashboard
+
+### **3. DublinBike Availability Forecasting**
+
+* ML-based bike availability prediction
+* Flask backend + AWS deployment
+* Real-time station insights
+* API discontinued — screenshots included
+
+---
+
+## 🎯 Future Improvements
+
+* Add dark mode
+* Add animations (Framer Motion)
+* Component modularization
+* Add blog/notes section
+
+---
+
+## 📄 License
+
+MIT License.
