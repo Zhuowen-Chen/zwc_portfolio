@@ -138,7 +138,7 @@ export default function Portfolio() {
           <h1 className="text-5xl font-bold text-slate-900 leading-tight">
             Zhuowen (Joy) Chen
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
+          <p className="text-xl text-slate-600 leading-relaxed">
             Results-driven professional with a strong foundation in business management, retail leadership, and customer service excellence. Currently pursuing a Master's in Computer Science to build skills in backend development, data analysis, and technical problem-solving. Passionate about blending business insight and technology to deliver practical solutions.
           </p>
           <div className="flex flex-wrap gap-6 text-slate-600 pt-4">
