@@ -199,7 +199,7 @@ export default function Portfolio() {
                   ) : project.id === 'waterford' ? (
                     <div className="w-full h-full flex flex-col items-center justify-center">
                       <img 
-                        src="https://i.imgur.com/dAcq1l6.jpeg"
+                        src="https://i.imgur.com/pjMqAi4.png"
                         alt="Waterford Crystal Inventory System Screenshot"
                         className="w-full h-auto rounded-lg shadow-2xl object-cover"
                       />
@@ -210,7 +210,7 @@ export default function Portfolio() {
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center">
                       <img 
-                        src="https://i.imgur.com/pjMqAi4.png"
+                        src="https://i.imgur.com/dAcq1l6.jpeg"
                         alt="BrickWyze UI/UX Design"
                         className="w-full h-auto rounded-lg shadow-2xl object-cover"
                       />
@@ -379,20 +379,65 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 py-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
-            <p className="text-slate-400 mb-6">Interested in technical sales solutions or collaboration opportunities?</p>
+
+            {/* 新的兴趣方向文案 + 标签区 */}
+            <p className="text-slate-300 mb-4">
+              I'm always interested in:
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <Code className="w-4 h-4 text-blue-300" />
+                <span className="text-sm">Frontend Developer</span>
+              </div>
+
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <Layout className="w-4 h-4 text-purple-300" />
+                <span className="text-sm">UI/UX Designer</span>
+              </div>
+
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <TrendingUp className="w-4 h-4 text-emerald-300" />
+                <span className="text-sm">New Businesses</span>
+              </div>
+
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <BarChart3 className="w-4 h-4 text-cyan-300" />
+                <span className="text-sm">Tech Engineer</span>
+              </div>
+
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <Users className="w-4 h-4 text-pink-300" />
+                <span className="text-sm">Sales</span>
+              </div>
+
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
+                <TrendingUp className="w-4 h-4 text-orange-300" />
+                <span className="text-sm">Startup</span>
+              </div>
+            </div>
+
+            {/* 按钮区保持不变 */}
             <div className="flex justify-center gap-6">
-              <a href="mailto:zhuowenchen1993@gmail.com" 
-                 className="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-medium">
+              <a
+                href="mailto:zhuowenchen1993@gmail.com"
+                className="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition font-medium"
+              >
                 <Mail className="w-5 h-5" />
                 Email Me
               </a>
-              <a href="https://linkedin.com/in/chen-zhuowen" target="_blank" rel="noopener noreferrer"
-                 className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition font-medium">
+              <a
+                href="https://linkedin.com/in/chen-zhuowen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-6 py-3 bg-slate-800 rounded-lg hover:bg-slate-700 transition font-medium"
+              >
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
             </div>
           </div>
+
           <div className="mt-12 pt-8 border-t border-slate-800 text-center text-slate-400 text-sm">
             © 2025 Zhuowen (Joy) Chen. Built with React.
           </div>
