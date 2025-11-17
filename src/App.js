@@ -4,11 +4,18 @@ import { ExternalLink, Github, Linkedin, Mail, MapPin, ChevronRight, Code, Trend
 export default function Portfolio() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeDublinBikeImage, setActiveDublinBikeImage] = useState(0);
+  const [activeAIArtImage, setActiveAIArtImage] = useState(0);
 
   const dublinBikeImages = [
     { url: "https://i.imgur.com/B5FONOi.jpeg", label: "Hero Page" },
     { url: "https://i.imgur.com/vxQcUHS.jpeg", label: "Interactive Map" },
     { url: "https://i.imgur.com/wqnrcRq.jpeg", label: "Prediction Dashboard" }
+  ];
+
+  const aiArtImages = [
+    { url: "https://i.imgur.com/mEhYHnT.png", label: "Participant Accuracy Analysis" },
+    { url: "https://i.imgur.com/taxiqbW.png", label: "Style Comparison Study" },
+    { url: "https://i.imgur.com/o0g2p3U.png", label: "Subject Analysis Results" }
   ];
 
   const projects = [
@@ -94,6 +101,34 @@ export default function Portfolio() {
       note: 'Live demo unavailable due to API deprecation. Screenshots show key features.',
       image: 'gradient-green',
       mockup: 'map'
+    },
+    {
+      id: 'aiart',
+      title: 'AI vs Human Art Recognition Study',
+      subtitle: 'Statistical Analysis of Human Perception in AI-Generated Artwork',
+      role: 'Data Analyst & Researcher',
+      period: 'Sep 2024 - Nov 2024',
+      type: 'Research & Data Analysis',
+      tags: ['Python', 'Pandas', 'Matplotlib', 'Seaborn', 'Statistical Analysis', 'Jupyter'],
+      description: 'Conducted a comprehensive statistical study analyzing human ability to distinguish AI-generated artwork from human-created art across different styles and subjects, revealing significant insights into perception biases and style-dependent recognition patterns.',
+      shortDescription: 'Statistical analysis of AI vs human art recognition patterns',
+      impact: [
+        'Analyzed 24 participants\' responses across 480 total judgments',
+        'Discovered significant human bias with 58.37% accuracy for human art vs 50.66% for AI',
+        'Identified watercolor style as most recognizable (76.34%) and fantasy as least (44.79%)',
+        'Provided data-driven insights for AI art detection and human perception studies'
+      ],
+      features: [
+        { icon: BarChart3, text: 'Statistical hypothesis testing and ANOVA' },
+        { icon: TrendingUp, text: 'Multi-dimensional accuracy analysis' },
+        { icon: Database, text: 'Comprehensive data visualization' },
+        { icon: Users, text: 'Participant performance tracking' }
+      ],
+      link: null,
+      github: null,
+      image: 'gradient-orange',
+      mockup: 'chart',
+      hasImageGallery: true
     }
   ];
 
@@ -254,6 +289,7 @@ export default function Portfolio() {
               <div className={`relative h-64 flex items-center justify-center overflow-hidden ${
                 project.image === 'gradient-blue' ? 'bg-gradient-to-br from-blue-600 to-cyan-600' :
                 project.image === 'gradient-purple' ? 'bg-gradient-to-br from-purple-600 to-pink-600' :
+                project.image === 'gradient-orange' ? 'bg-gradient-to-br from-orange-600 to-red-600' :
                 'bg-gradient-to-br from-emerald-600 to-teal-600'
               }`}>
                 {/* Background pattern */}
@@ -274,6 +310,12 @@ export default function Portfolio() {
                       src={dublinBikeImages[0].url} 
                       alt={project.title}
                       className="w-full h-full object-cover rounded-lg shadow-2xl opacity-90 group-hover:opacity-100 transition-opacity"
+                    />
+                  ) : project.id === 'aiart' ? (
+                    <img 
+                      src={aiArtImages[0].url} 
+                      alt={project.title}
+                      className="w-full h-full object-contain rounded-lg shadow-2xl opacity-90 group-hover:opacity-100 transition-opacity"
                     />
                   ) : project.screenshot ? (
                     <img 
@@ -361,6 +403,7 @@ export default function Portfolio() {
                   <div className={`rounded-xl overflow-hidden ${
                     selectedProject.image === 'gradient-blue' ? 'bg-gradient-to-br from-blue-600 to-cyan-600' :
                     selectedProject.image === 'gradient-purple' ? 'bg-gradient-to-br from-purple-600 to-pink-600' :
+                    selectedProject.image === 'gradient-orange' ? 'bg-gradient-to-br from-orange-600 to-red-600' :
                     'bg-gradient-to-br from-emerald-600 to-teal-600'
                   }`}>
                     {selectedProject.id === 'dublinbike' ? (
@@ -383,6 +426,28 @@ export default function Portfolio() {
                         </div>
                         <div className="text-center text-white/90 text-sm">
                           {dublinBikeImages[activeDublinBikeImage].label}
+                        </div>
+                      </div>
+                    ) : selectedProject.id === 'aiart' ? (
+                      <div className="p-6 space-y-4">
+                        <img 
+                          src={aiArtImages[activeAIArtImage].url} 
+                          alt={aiArtImages[activeAIArtImage].label}
+                          className="w-full h-auto rounded-lg shadow-2xl bg-white p-2"
+                        />
+                        <div className="flex justify-center gap-2">
+                          {aiArtImages.map((_, i) => (
+                            <button
+                              key={i}
+                              onClick={() => setActiveAIArtImage(i)}
+                              className={`h-1 rounded-full transition-all ${
+                                activeAIArtImage === i ? 'bg-white w-8' : 'bg-white/30 w-1'
+                              }`}
+                            />
+                          ))}
+                        </div>
+                        <div className="text-center text-white/90 text-sm">
+                          {aiArtImages[activeAIArtImage].label}
                         </div>
                       </div>
                     ) : (
